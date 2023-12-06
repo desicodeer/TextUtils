@@ -7,10 +7,12 @@ function TextForm(props) {
     // console.log("Uppercase was clicked");
     let newText = text.toUpperCase();
     setText(newText);
+     props.showAlert("Text Converted to Upper Case","success");
   }
   const handleLowClick = ()=>{
     let lowText = text.toLowerCase();
     setText(lowText);
+     props.showAlert("Text Converted to Lower Case","success");
   }
   const handleCapitalizeClick = ()=>{
     let arr = text.toLowerCase();
@@ -20,6 +22,7 @@ function TextForm(props) {
     }
     const newCap = arr.join(" ");
     setText(newCap);
+     props.showAlert("Text Converted to Capitalise form","success");
   }
   const handleClear = ()=>{
     let newText = "";
@@ -29,7 +32,7 @@ function TextForm(props) {
     let newText = document.getElementById("exampleFormControlTextarea1");
     newText.select();
     navigator.clipboard.writeText(newText.value);
-    
+    props.showAlert("Text Copied","success");
   }
 
   const handleOnChange = (event)=>{
