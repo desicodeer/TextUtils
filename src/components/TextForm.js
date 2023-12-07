@@ -52,11 +52,11 @@ function TextForm(props) {
          <div className="mb-3" >
          <textarea className="form-control" value={text} onChange={handleOnChange} style={{color: props.mode === 'dark'?'white':'black',backgroundColor: props.mode ==='dark'?'black':'White'}} placeholder="Enter some text" id="exampleFormControlTextarea1" rows="8"></textarea>
          </div>
-         <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to UpperCase</button>
-         <button disabled={text.length===0} className="btn btn-warning mx-1" onClick={handleLowClick}>Convert to LowerCase</button>
-         <button disabled={text.length===0} className="btn btn-light mx-1" onClick={handleCapitalizeClick}>Convert to Capitalise</button>
-         <button disabled={text.length===0} className="btn btn-success mx-1" onClick={handleClear}>Clear</button>
-         <button disabled={text.length===0} className="btn btn-secondary mx-1" onClick={handleCopy}>Copy Item</button>
+         <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to UpperCase</button>
+         <button disabled={text.length===0} className="btn btn-warning mx-1 my-1" onClick={handleLowClick}>Convert to LowerCase</button>
+         <button disabled={text.length===0} className="btn btn-light mx-1 my-1" onClick={handleCapitalizeClick}>Convert to Capitalise</button>
+         <button disabled={text.length===0} className="btn btn-success mx-1 my-1" onClick={handleClear}>Clear</button>
+         <button disabled={text.length===0} className="btn btn-secondary mx-1 my-1" onClick={handleCopy}>Copy Item</button>
          <button disabled={text.length===0} disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
          <h2 className="my-3" style={{color: props.mode === 'dark'?'white':'black'}}>Your Text Summary</h2>
          <p style={{color: props.mode === 'dark'?'white':'black'}}><strong>{text.split(" ").filter((value)=>{return value.length!==0}).length}</strong> words and <strong>{text.trim().length}</strong> characters</p>
