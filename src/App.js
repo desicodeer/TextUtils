@@ -38,7 +38,7 @@ function App() {
    }
   return (
         <>
-        <Navbar title="TextUtils" aboutText="About us" mode={mode} toggleMode={toggleMode}/>
+        <Navbar title="TextUtils" aboutText="About us" mode={mode} toggleMode={toggleMode} key={new Date()}/>
          <Alert alert={alert} />
          // <About />
         <div className="container my-3">
