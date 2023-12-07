@@ -6,6 +6,12 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 // import About from './components/About';
 // let name = "Aanchal";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
+
 function App() {
    const [mode,setMode] = useState('light');
    const [alert,setAlert] = useState(null);
@@ -38,6 +44,21 @@ function App() {
         <div className="container my-3">
         <TextForm heading="Enter the Text you like" mode={mode} showAlert={showAlert}/> 
         </div>
+       {/* <Router>
+        <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode}/> */}
+        {/* <About /> */}
+        {/* <Alert alert={alert} />
+        <div className="container my-3"mode={mode}>
+        <Routes> */}
+          {/* /user   component 1
+              /user/home   component2 thats why exact used so react properly search*/}
+          {/* <Route exact path="/about" element={<About />} />
+          <Route exact path="/" element={ <TextForm heading="Enter the Text you like" mode={mode} showAlert={showAlert}/>} />
+        </Routes>
+        
+        </div>
+        </Router> */}
+        
         </>
       // <>
       // <nav className="navbar">
