@@ -29,10 +29,11 @@ function TextForm(props) {
     setText(newText);
   }
   const handleCopy = ()=>{
-    let newText = document.getElementById("exampleFormControlTextarea1");
-    newText.select();
-    navigator.clipboard.writeText(newText.value);
-    document.getSelection().removeAllRanges();
+    // let newText = document.getElementById("exampleFormControlTextarea1");
+    // newText.select();
+    // navigator.clipboard.writeText(newText.value);
+    // document.getSelection().removeAllRanges();
+     navigator.clipboard.writeText(text);
     props.showAlert("Text Copied","success");
   }
   const handleExtraSpaces = () => {
