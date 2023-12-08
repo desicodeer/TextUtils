@@ -1,34 +1,37 @@
-import React,{useState} from 'react'
-
+// import React,{useState} from 'react'
+import React from 'react'
 export default function About() {
-const [myStyle,setMyStyle] = useState({
-    color:"black",
-    backgroundColor:"white"
-})
-const [btnText,setBtnText] = useState("Enable Dark Mode")
-const toggleMyStyle = ()=>{
-    if(myStyle.color === "black"){
-        setMyStyle({
-            color:"white",
-            backgroundColor:"black",
-            border:"1px solid white"
-        })
-        setBtnText("Enable Light Mode");
-    }
-    else{
-        setMyStyle({
-            color:"black",
-            backgroundColor:"white"  
+// const [myStyle,setMyStyle] = useState({
+//     color:"black",
+//     backgroundColor:"white"
+// })
+// const [btnText,setBtnText] = useState("Enable Dark Mode")
+// const toggleMyStyle = ()=>{
+//     if(myStyle.color === "black"){
+//         setMyStyle({
+//             color:"white",
+//             backgroundColor:"black",
+//             border:"1px solid white"
+//         })
+//         setBtnText("Enable Light Mode");
+//     }
+//     else{
+//         setMyStyle({
+//             color:"black",
+//             backgroundColor:"white"  
             
-        })
-        setBtnText("Enable Dark Mode");
-    }
+//         })
+//         setBtnText("Enable Dark Mode");
+//     }
+// }
+let myStyle = {
+    color : props.mode === 'dark'?'white':'black',
+    backgroundColor : props.mode === 'dark'?'black':'white'
 }
-
   return (
         <div>
             <div className='container' style={myStyle}>
-            <h1>About Us</h1>
+            <h1 style={{color: props.mode ==='dark'?'white':'black'}}>About Us</h1>
             <div className="accordion" id="accordionExample">
     <div className="accordion-item">
         <h2 className="accordion-header">
@@ -67,7 +70,7 @@ const toggleMyStyle = ()=>{
         </div>
     </div>
     </div>
-    <button className="btn btn-primary my-3" onClick={toggleMyStyle}>{btnText}</button>
+    // <button className="btn btn-primary my-3" onClick={toggleMyStyle}>{btnText}</button>
             </div>
             
         
