@@ -52,8 +52,8 @@ function App() {
         <Routes> */}
           {/* /user   component 1
               /user/home   component2 thats why exact used so react properly search*/}
-          {/* <Route exact path="/about" element={<About />} />
-          <Route exact path="/" element={ <TextForm heading="Enter the Text you like" mode={mode} showAlert={showAlert}/>} />
+          {/* <Route exact path="/about" element={<About mode={mode/>} />
+          <Route exact path="/" element={ <TextForm heading="Enter the Text you like" mode={mode} showAlert={showAlert}  key={new Date()}/>} />
         </Routes>
         
         </div>
